@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtUnityWorkshop.Combatant
   animationPresenter: {fileID: 1357146623733533688}
-  hitParticlePrefab: {fileID: 5869763555766250349, guid: 3beaf585b01746c41bcebce10a14a4eb, type: 3}
+  hitParticlePrefab: {fileID: 5869763555766250349, guid: d979e4d4c54d14866a59712784330cc1, type: 3}
   hitEffectAnchor: {fileID: 2296509009274616175}
 --- !u!114 &1699823781576550285
 MonoBehaviour:
