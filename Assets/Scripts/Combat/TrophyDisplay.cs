@@ -73,6 +73,17 @@ namespace ArtUnityWorkshop
                         DestroyImmediate(instance);
                 }
 
+                // Edit Mode에서 만든 모델이 Play 진입 후 남아 있으면 겹쳐 보이므로 먼저 정리합니다.
+                for (int i = modelRoot.childCount - 1; i >= 0; i--)
+                {
+                    var stale = modelRoot.GetChild(i).gameObject;
+                    stale.SetActive(false);
+                    if (Application.isPlaying)
+                        Destroy(stale);
+                    else
+                        DestroyImmediate(stale);
+                }
+
                 instance = Instantiate(modelPrefab, modelRoot);
                 instance.name = "TrophyModel";
                 builtPrefab = modelPrefab;
